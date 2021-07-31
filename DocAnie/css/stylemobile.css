@@ -1,0 +1,209 @@
+﻿/*---dairy----*/
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: #2b3e50;
+}
+            section .left .content:hover {
+                background: #2b3e50;
+            }
+
+            section .left .content h1 {
+                margin: 10px;
+                padding: 0;
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #00BF85;
+            }
+
+            section .left .content p {
+                margin: 10px 0 0;
+                padding: 0;
+            }
+
+    section .events {
+        position: relative;
+        width: 50%;
+        height: 30%;
+        background: #000000;
+        float: right;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+        section .events ul {
+            position: absolute;
+            top: 50%;
+            margin: 0;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+            section .events ul li {
+                list-style: none;
+                background: #2b3e50;
+                box-sizing: border-box;
+                height: auto;
+                margin: 15px 0 0;
+            }
+
+                section .events ul li .time {
+                    position: relative;
+                    padding: 20px;
+                    background: #262626;
+                    box-sizing: border-box;
+                    width: 30%;
+                    height: 100%;
+                    float: left;
+                    text-align: center;
+                    transition: .5s;
+                }
+
+                section .events ul li:hover .time {
+                    background: #e91e63;
+                }
+
+                section .events ul li .time h2 {
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    color: #fff;
+                    font-size: 35.5px;
+                    line-height: 20px;
+                }
+
+                    section .events ul li .time h2 span {
+                        font-size: 30px;
+                        color: #000000;
+                    }
+
+                section .events ul li .details {
+                    padding: 20px;
+                    background: #000000;
+                    box-sizing: border-box;
+                    width: 70%;
+                    height: 100%;
+                    float: left;
+                }
+
+                    section .events ul li .details h3 {
+                        position: relative;
+                        margin: 0;
+                        padding: 5px;
+                        font-size: 16px;
+                        
+                    }
+
+                    section .events ul li .details p {
+                        position: relative;
+                        margin: 10px 0 0;
+                        padding: 0;
+                        font-size: 16px;
+                    }
+
+                    section .events ul li .details a {
+                        display: inline-block;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 5px 10px;
+                        border: 2px solid #262626;
+                        margin-top: 5px;
+                        font-size: 10px;
+                        transition: .5s;
+                    }
+
+                        section .events ul li .details a:hover {
+                            background: #000000;
+                            color: #fff;
+                            border-color: #000000;
+                        }
+
+@media (max-width: 991px) {
+    section {
+        height: 100%;
+        background-position: center;
+    }
+
+        section .left {
+            width: 100%;
+            height: auto;
+            float: none;
+        }
+
+        section .events {
+            width: 100%;
+            height: auto;
+            background: transparent;
+            float: none;
+            padding: 0 20px 20px;
+        }
+
+        section .left .content {
+            padding: 20px;
+        }
+
+            section .left .content h1 {
+                font-size: 30px;
+            }
+
+        section .events ul {
+            position: relative;
+            transform: translate(0px);
+            padding: 0 10px 10px;
+        }
+
+            section .events ul li {
+                height: auto;
+                background: #4e5d6c;
+            }
+
+                section .events ul li .time {
+                    width: 80px;
+                    height: 80px;
+                    padding: 0;
+                }
+
+                    section .events ul li .time h2 {
+                        font-size: 30px;
+                        line-height: 24px;
+                    }
+
+                        section .events ul li .time h2 span {
+                            font-size: 20px;
+                        }
+
+                section .events ul li .details {
+                    width: 100%;
+                    float: none;
+                    padding-left: 100px;
+                    background: transparent;
+                }
+
+                    section .events ul li .details a {
+                        padding: 5px 10px;
+                    }
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+    #myBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+    }

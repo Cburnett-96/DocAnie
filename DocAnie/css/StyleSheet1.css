@@ -1,0 +1,22 @@
+﻿body {
+}
+header {
+    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url(../images/1.mp4.jpg);
+    height: 130vh;
+    background-size: 100% 100%;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .title h1 {
+        font-weight: 600;
+        padding: 0.6rem 1.4rem;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #fff;
+    }

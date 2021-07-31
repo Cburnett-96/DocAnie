@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DocAnie.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - DocAni</title>
+
+    <%--our custom css--%>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/StyleSheet1.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <asp:PlaceHolder runat="server"></asp:PlaceHolder>
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <!-----NavigationBar---->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../">
+                <img src="../images/DocAni_Logo.png" width="30" height="30" />
+                DocAni
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../">Home</a>
+                    </li>
+                    <li id="history" runat="server" class="nav-item" visible="false">
+                        <a class="nav-link" href="../History.aspx">History</a>
+                    </li>
+                    <li id="calendar" runat="server" class="nav-item" visible="false">
+                        <a class="nav-link" href="../calendar.aspx">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Rice Management.aspx">Rice Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../variety">Variety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../About.aspx">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Contact.aspx">Contact</a>
+                    </li>
+                </ul>
+                <asp:Label ID="lblGreeting" runat="server"></asp:Label>
+                <asp:LinkButton CssClass="nav-link" ID="linkbtnlogin" runat="server" OnClick="linkbtnlogin_Click">Login</asp:LinkButton>
+                <asp:LinkButton CssClass="nav-link" ID="linkbtnlogout" runat="server" OnClick="linkbtnlogout_Click">Logout</asp:LinkButton>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <hr />
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - DocAni</p>
+        </footer>
+    </form>
+
+    <%--jquery--%>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
